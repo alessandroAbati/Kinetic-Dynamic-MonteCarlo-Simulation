@@ -1,5 +1,7 @@
 # Kinetic/Dynamic MonteCarlo Simulation
  Simple example of Kinetic/Dynamic Monte-Carlo simulation of 2 particles chemical reaction.
+ 
+ ![montecarlosimulation](https://github.com/alessandroAbati/Kinetic-Dynamic-MonteCarlo-Simulation/assets/136715422/d7ad3c98-8b56-4afc-baaf-29474300bb99)
 
  This project introduces a Monte Carlo simulation model for investigating natural processes, specifically focusing on a chemical reaction involving two particles, A and B. This project not only showcases the application of Monte Carlo simulation as a computational tool but also highlights the convergence of simulation results towards the analytical solution.
 
