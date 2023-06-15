@@ -21,10 +21,9 @@ $\ce{A ->[k_1] B}$ and $\ce{B ->[k_2] A}$
 
 They can be written as an ordinary equation:
 ```math
-\frac{d}{dt} \begin{pmatrix} A \\ B \end{pmatrix}
+\frac{d}{dt} \begin{pmatrix} A \\ B \end{pmatrix} = \begin{pmatrix}
+-k_1 & k_2 \\
+k_1 & -k_2
+\end{pmatrix}
+\begin{pmatrix} A \\ B \end{pmatrix}
 ```
-
-```math
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-```
-
