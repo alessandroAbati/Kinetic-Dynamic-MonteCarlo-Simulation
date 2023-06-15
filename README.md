@@ -1,7 +1,7 @@
 # Kinetic/Dynamic MonteCarlo Simulation
- Simple example of Kinetic/Dynamic Monte-Carlo simulation of 2 particles chemical reaction 
+ Simple example of Kinetic/Dynamic Monte-Carlo simulation of 2 particles chemical reaction.
 
- This project introduces a simple example of a Monte Carlo simulation model for investigating natural processes, specifically focusing on a chemical reaction involving two particles, A and B. This project not only showcases the application of Monte Carlo simulation as a computational tool but also highlights the convergence of simulation results towards the analytical solution.
+ This project introduces a Monte Carlo simulation model for investigating natural processes, specifically focusing on a chemical reaction involving two particles, A and B. This project not only showcases the application of Monte Carlo simulation as a computational tool but also highlights the convergence of simulation results towards the analytical solution.
 
 Monte Carlo simulations utilize random sampling to mimic and analyze complex systems. In this project, the simulation model employs the kinetic-dynamic Monte Carlo method to capture the dynamic behavior of particle concentrations during the chemical reaction. By simulating numerous random events based on defined probabilities, the model generates concentration profiles for particles A and B over time.
 
@@ -12,3 +12,6 @@ The project extends beyond a single simulation run and incorporates multiple sim
 By demonstrating the convergence of the average concentration profiles towards the analytical solution, the project highlights the power of Monte Carlo simulations in approximating complex natural processes. It underscores the ability to derive meaningful insights from the statistical behavior observed across multiple simulation runs and reinforces the reliability of the simulation model.
 
 Overall, this project showcases proficiency in mathematical modeling, statistical analysis, and computational simulation. It exemplifies the application of Monte Carlo methods to gain a deeper understanding of natural processes and emphasizes the convergence of simulation results towards analytical solutions.
+
+# Theory:
+Let's consider the chemical equation: $A ->_{k_1} B $
