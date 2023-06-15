@@ -3,6 +3,7 @@
 
  ![monteCarloSimulation](https://github.com/alessandroAbati/Kinetic-Dynamic-MonteCarlo-Simulation/assets/136715422/9ccb0fc3-d9d1-4941-8a5b-a131b9f7fb0c)
 
+### Introduction
  This project introduces a Monte Carlo simulation model for investigating natural processes, specifically focusing on a chemical reaction involving two particles, A and B. This project not only showcases the application of Monte Carlo simulation as a computational tool but also highlights the convergence of simulation results towards the analytical solution.
 
 Monte Carlo simulations utilize random sampling to mimic and analyze complex systems. In this project, the simulation model employs the kinetic-dynamic Monte Carlo method to capture the dynamic behavior of particle concentrations during the chemical reaction. By simulating numerous random events based on defined probabilities, the model generates concentration profiles for particles A and B over time.
@@ -15,10 +16,10 @@ By demonstrating the convergence of the average concentration profiles towards t
 
 Overall, this project showcases proficiency in mathematical modeling, statistical analysis, and computational simulation. It exemplifies the application of Monte Carlo methods to gain a deeper understanding of natural processes and emphasizes the convergence of simulation results towards analytical solutions.
 
-## Theory:
+### Theory:
 Let's consider the chemical equations:
 $\ce{A ->[k_1] B}$ and $\ce{B ->[k_2] A}$
-
+where $A$ and $B$ are the concentration of two particles.
 They can be written as an ordinary equation:
 ```math
 \frac{d}{dt} \begin{pmatrix} A \\ B \end{pmatrix} = \begin{pmatrix}
@@ -27,3 +28,11 @@ k_1 & -k_2
 \end{pmatrix}
 \begin{pmatrix} A \\ B \end{pmatrix}
 ```
+
+With analytical solution:
+```math
+A(t) = \frac{k_2}{k_1+k_2}(A_0+B_0) + \frac{A_0 k_1 - B_0 k_2}{k_1+k_2}\exp^{-(k_1+k_2)t}
+B(t) = \frac{k_1}{k_1+k_2}(A_0+B_0) - \frac{A_0 k_1 - B_0 k_2}{k_1+k_2}\exp^{-(k_1+k_2)t}
+```
+where $A_0$ e $B_0$ are the initial concentration of $A$ and $B$.
+
