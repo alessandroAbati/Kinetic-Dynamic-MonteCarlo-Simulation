@@ -14,4 +14,4 @@ By demonstrating the convergence of the average concentration profiles towards t
 Overall, this project showcases proficiency in mathematical modeling, statistical analysis, and computational simulation. It exemplifies the application of Monte Carlo methods to gain a deeper understanding of natural processes and emphasizes the convergence of simulation results towards analytical solutions.
 
 # Theory:
-Let's consider the chemical equation: $\ce{A ->k_1 B} $
+Let's consider the chemical equation: $\ce{A ->[k_1] B} $
