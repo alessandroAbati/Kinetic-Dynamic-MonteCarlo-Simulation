@@ -17,9 +17,7 @@ Overall, this project showcases proficiency in mathematical modeling, statistica
 
 ## Theory:
 Let's consider the chemical equations:
-$\ce{A ->[k_1] B} /space \ce{B ->[k_2] A}$
+$\ce{A ->[k_1] B} \space \ce{B ->[k_2] A}$
 They can be written as an ordinary equation:
-$\frac{d}{dt}\begin{pmatrix}
-A \\
-B \end{pmatrix}$
+$\frac{d}{dt} \begin{pmatrix} A \\ B \end{pmatrix}$
 
