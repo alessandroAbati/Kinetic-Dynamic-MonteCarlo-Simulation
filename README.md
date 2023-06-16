@@ -16,7 +16,7 @@ By demonstrating the convergence of the average concentration profiles towards t
 
 Overall, this project showcases proficiency in mathematical modeling, statistical analysis, and computational simulation. It exemplifies the application of Monte Carlo methods to gain a deeper understanding of natural processes and emphasizes the convergence of simulation results towards analytical solutions.
 
-### Theory:
+### Theory
 Let's consider the abstract chemical equations
 $\ce{A ->[k_1] B}$ and $\ce{B ->[k_2] A}$
 where some molecule $A$ can transform into a molecule $B$ with the rate $k_1$ and $B$ can transform back to $A$ with the rate $k_2$.
@@ -31,14 +31,24 @@ k_1 & -k_2
 
 With analytical solution:
 ```math
-A(t) = \frac{k_2}{k_1+k_2}(A_0+B_0) + \frac{A_0 k_1 - B_0 k_2}{k_1+k_2}\exp^{-(k_1+k_2)t}
-\;\;\;\;\;\;
-B(t) = \frac{k_1}{k_1+k_2}(A_0+B_0) - \frac{A_0 k_1 - B_0 k_2}{k_1+k_2}\exp^{-(k_1+k_2)t}
+A(t) = \frac{k_2}{k_1+k_2}(A_0+B_0) + \frac{A_0 k_1 - B_0 k_2}{k_1+k_2} e^{-(k_1+k_2)t}
+\hspace{30pt}
+B(t) = \frac{k_1}{k_1+k_2}(A_0+B_0) - \frac{A_0 k_1 - B_0 k_2}{k_1+k_2} e^{-(k_1+k_2)t}
 ```
 where $A_0$ e $B_0$ are the initial concentration of $A$ and $B$.
 As we can see, for $t \rightarrow \infty$:
 ```math
-A(t) \rightarrow \frac{k_2}{k_1+k_2}(A_0+B_0) \hspace{10pt} B(t) \rightarrow \frac{k_1}{k_1+k_2}(A_0+B_0)
+A(t) \rightarrow \frac{k_2}{k_1+k_2}(A_0+B_0) \hspace{50pt} B(t) \rightarrow \frac{k_1}{k_1+k_2}(A_0+B_0)
 ```
 which are the equilibrium density of the molecules.
+
+### Algorithm
+Let's try to sample these processes with some random processes.
+We have a molecule A that suddenly turns into a molecule B with some rate and viceversa; so, there is a probability that given a time interval $\delta t$ the transformation happens. Thus, let's consider $\delta t$ small enough so that $\delta t k_1 < 1$ and $\delta t k_2 < 1$ so we can consider $\delta t k_1$ as the probability for molecule $A$ to transform into $B$ in $\delta t$ and $\delta t k_2$ as the probability for molecule $B$ to transform into $A$ in $\delta t$.
+So we can define the following algorithm:
+1. We pick randomly a molecule in the system of $N = A(t) + B(t) $ molecules; practically we can do that considering that $\frac{A}{A+B}$ is the probability that if i pick a random molecule in the system that molecule will be an A-type one. So we can say that we have chosen an A-type molecule if $random.uniform(0,1) < \frac{A}{A+B}$ and a B-type molecule otherwise.
+2.a If molecule A was chosen, it is transformed into a B molecule provided $random.uniform(0,1) < k_1 \delta t$; then, $A = A - 1$ and $B = B + 1$.
+2.b If molecule B was chosen, it is transformed into a A molecule provided $random.uniform(0,1) < k_2 \delta t$; then, $A = A + 1$ and $B = B - 1$.
+3. We repeat (1) and (2) for all the molecules in the system ($N$ times) and the physical time $t$ is incremented by $\delta t$: $t = t + \delta t$.
+4. We repeat (1), (2) and (3) until $t=t_{max}$.
 
