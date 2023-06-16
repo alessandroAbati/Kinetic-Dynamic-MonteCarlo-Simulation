@@ -70,4 +70,4 @@ Make sure you have the following dependencies installed:
 5. The plots will show the simulated concentration profiles for A and B, along with the analytical solutions and equilibrium concentrations. You can observe how the average concentration profiles tend to converge towards the analytical solutions as the number of simulations increases.
 
 ### References
-This project is based on the section *Introduction and general concepts* of the Coursera course *Simulation and modeling of natural processes* (https://www.coursera.org/learn/modeling-simulation-natural-processes/home/week/1).
+This project is based on the section *Introduction and general concepts* of the Coursera course *Simulation and modeling of natural processes* (https://www.coursera.org/learn/modeling-simulation-natural-processes).
