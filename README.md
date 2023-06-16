@@ -36,10 +36,9 @@ A(t) = \frac{k_2}{k_1+k_2}(A_0+B_0) + \frac{A_0 k_1 - B_0 k_2}{k_1+k_2}\exp^{-(k
 B(t) = \frac{k_1}{k_1+k_2}(A_0+B_0) - \frac{A_0 k_1 - B_0 k_2}{k_1+k_2}\exp^{-(k_1+k_2)t}
 ```
 where $A_0$ e $B_0$ are the initial concentration of $A$ and $B$.
-
 As we can see, for $t \rightarrow \infty$:
 ```math
-A(t) \rightarrow \frac{k_2}{k_1+k_2}(A_0+B_0) \hspace{10} B(t) \rightarrow \frac{k_1}{k_1+k_2}(A_0+B_0)
+A(t) \rightarrow \frac{k_2}{k_1+k_2}(A_0+B_0) \hspace{10pt} B(t) \rightarrow \frac{k_1}{k_1+k_2}(A_0+B_0)
 ```
 which are the equilibrium density of the molecules.
 
