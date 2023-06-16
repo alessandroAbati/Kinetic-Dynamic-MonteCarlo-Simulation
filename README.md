@@ -1,4 +1,4 @@
-# Kinetic/Dynamic MonteCarlo Simulation
+# Kinetic/Dynamic Monte-Carlo Simulation
  Simple example of Kinetic/Dynamic Monte-Carlo simulation of 2 particles chemical reaction.
 
  ![monteCarloSimulation](https://github.com/alessandroAbati/Kinetic-Dynamic-MonteCarlo-Simulation/assets/136715422/9ccb0fc3-d9d1-4941-8a5b-a131b9f7fb0c)
@@ -17,10 +17,10 @@ By demonstrating the convergence of the average concentration profiles towards t
 Overall, this project showcases proficiency in mathematical modeling, statistical analysis, and computational simulation. It exemplifies the application of Monte Carlo methods to gain a deeper understanding of natural processes and emphasizes the convergence of simulation results towards analytical solutions.
 
 ### Theory:
-Let's consider the chemical equations:
+Let's consider the abstract chemical equations
 $\ce{A ->[k_1] B}$ and $\ce{B ->[k_2] A}$
-where $A$ and $B$ are the concentration of two particles.
-They can be written as an ordinary equation:
+where some molecule $A$ can transform into a molecule $B$ with the rate $k_1$ and $B$ can transform back to $A$ with the rate $k_2$.
+They can be written as an ordinary equation (in a matrix form):
 ```math
 \frac{d}{dt} \begin{pmatrix} A \\ B \end{pmatrix} = \begin{pmatrix}
 -k_1 & k_2 \\
@@ -32,7 +32,15 @@ k_1 & -k_2
 With analytical solution:
 ```math
 A(t) = \frac{k_2}{k_1+k_2}(A_0+B_0) + \frac{A_0 k_1 - B_0 k_2}{k_1+k_2}\exp^{-(k_1+k_2)t}
+```
+```math
 B(t) = \frac{k_1}{k_1+k_2}(A_0+B_0) - \frac{A_0 k_1 - B_0 k_2}{k_1+k_2}\exp^{-(k_1+k_2)t}
 ```
 where $A_0$ e $B_0$ are the initial concentration of $A$ and $B$.
+
+As we can see, for $t \arrow \inf$:
+```math
+A(t) \arrow \frac{k_2}{k_1+k_2}(A_0+B_0) \ B(t) \arrow \frac{k_1}{k_1+k_2}(A_0+B_0)
+```
+which are the equilibrium density of the molecules.
 
