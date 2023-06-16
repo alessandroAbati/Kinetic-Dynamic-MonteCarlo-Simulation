@@ -1,14 +1,14 @@
 # Kinetic/Dynamic Monte-Carlo Simulation
- Simple example of Kinetic/Dynamic Monte-Carlo simulation of 2 particles chemical reaction.
+ Simple example of Kinetic/Dynamic Monte-Carlo simulation of 2 molecules chemical reaction.
 
  ![monteCarloSimulation](https://github.com/alessandroAbati/Kinetic-Dynamic-MonteCarlo-Simulation/assets/136715422/9ccb0fc3-d9d1-4941-8a5b-a131b9f7fb0c)
 
 ### Introduction
- This project introduces a Monte Carlo simulation model for investigating natural processes, specifically focusing on a chemical reaction involving two particles, A and B. This project not only showcases the application of Monte Carlo simulation as a computational tool but also highlights the convergence of simulation results towards the analytical solution.
+ This project introduces a basic Monte Carlo simulation model for investigating natural processes, specifically focusing on a chemical reaction involving two molecules, A and B. This project not only showcases the application of Monte Carlo simulation as a computational tool but also highlights the convergence of simulation results towards the analytical solution.
 
-Monte Carlo simulations utilize random sampling to mimic and analyze complex systems. In this project, the simulation model employs the kinetic-dynamic Monte Carlo method to capture the dynamic behavior of particle concentrations during the chemical reaction. By simulating numerous random events based on defined probabilities, the model generates concentration profiles for particles A and B over time.
+Monte Carlo simulations utilize random sampling to mimic and analyze complex systems. In this project, the simulation model employs the kinetic-dynamic Monte Carlo method to capture the dynamic behavior of molecule concentrations during the chemical reaction. By simulating numerous random events based on defined probabilities, the model generates concentration profiles for molecules A and B over time.
 
-To verify the accuracy of the simulation, the code also provides analytical solutions for the particle concentrations. These solutions are obtained by solving the differential equations that govern the chemical reaction. The analytical solutions serve as reference benchmarks for comparison with the simulation results.
+To verify the accuracy of the simulation, the code also provides analytical solutions for the molecule concentrations. These solutions are obtained by solving the differential equations that govern the chemical reaction. The analytical solutions serve as reference benchmarks for comparison with the simulation results.
 
 The project extends beyond a single simulation run and incorporates multiple simulations to capture the system's variability. The average concentration profiles over these simulations are calculated and plotted. As the number of simulations increases, the average concentration profiles tend to converge towards the analytical solution. The convergence occurs because the random fluctuations in individual simulations tend to cancel each other out when averaged over multiple runs. The aggregate behavior of the system, reflected in the average concentration profiles, aligns more closely with the expected deterministic behavior described by the analytical solution.
 
@@ -52,3 +52,25 @@ So we can define the following algorithm:
 3. We repeat (1) and (2) for all the molecules in the system ($N$ times) and the physical time $t$ is incremented by $\Delta t$: $t = t + \Delta t$.
 4. We repeat (1), (2) and (3) until $t=t_{max}$.
 
+### Prerequisites
+Make sure you have the following dependencies installed:
+
+- Python 3.x
+- matplotlib
+- numpy
+
+### How to Use
+1. Clone the repository or download the source code.
+
+2. Open the Python script chemical_reaction_simulation.py in your preferred Python editor.
+
+3. Modify the following parameters to customize the simulation:
+
+    - A0 and B0: Initial concentrations of molecules A and B.
+    - k1 and k2: Rates of conversion between A and B.
+    - Dt: Time step size for the simulation.
+    - t_max: Maximum simulation time.
+    - number_of_simulations: Number of simulations to run.
+4. Run the script. The simulation will generate concentration profiles for molecules A and B over time.
+
+5. The plots will show the simulated concentration profiles for A and B, along with the analytical solutions and equilibrium concentrations. You can observe how the average concentration profiles tend to converge towards the analytical solutions as the number of simulations increases.
