@@ -47,7 +47,7 @@ Let's try to sample these processes with some random processes.
 We have a molecule A that suddenly turns into a molecule B with some rate and viceversa; so, there is a probability that given a time interval $\Delta t$ the transformation happens. Thus, let's consider $\Delta t$ small enough so that $\Delta t k_1 < 1$ and $\Delta t k_2 < 1$ so we can consider $\Delta t k_1$ as the probability for molecule $A$ to transform into $B$ in $\Delta t$ and $\Delta t k_2$ as the probability for molecule $B$ to transform into $A$ in $\Delta t$.
 So we can define the following algorithm:
 1. We pick randomly a molecule in the system of $N = A(t) + B(t)$ molecules; practically we can do that considering that $\frac{A}{A+B}$ is the probability that if i pick a random molecule in the system that molecule will be an A-type one. So we can say that we have chosen an A-type molecule if $random.uniform(0,1) < \frac{A}{A+B}$ and a B-type molecule otherwise.
-2. (a) If molecule A was chosen, it is transformed into a B molecule provided $random.uniform(0,1) < k_1 \Delta t$; then, $A = A - 1$ and $B = B + 1$.
+2. (a) If molecule A was chosen, it is transformed into a B molecule provided $random.uniform(0,1) < k_1 \Delta t$; then, $A = A - 1$ and $B = B + 1$. <br />
 (b) If molecule B was chosen, it is transformed into a A molecule provided $random.uniform(0,1) < k_2 \Delta t$; then, $A = A + 1$ and $B = B - 1$.
 3. We repeat (1) and (2) for all the molecules in the system ($N$ times) and the physical time $t$ is incremented by $\Delta t$: $t = t + \Delta t$.
 4. We repeat (1), (2) and (3) until $t=t_{max}$.
