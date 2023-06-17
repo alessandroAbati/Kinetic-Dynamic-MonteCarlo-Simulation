@@ -11,11 +11,11 @@ class chemicalSystem:
 		self.k1 = k1 #rate of A->B
 		self.k2 = k2 #rate of B->A
 		self.Dt = Dt #time step
-		assert k1*Dt < 1, "k1*Dt > 1"
-		assert k2*Dt < 2, "k2*Dt > 1"
+		assert k1*Dt < 1, "k1*Dt > 1" #k1Dt should be a probability
+		assert k2*Dt < 2, "k2*Dt > 1" #k2Dt should be a probability
 
 	def simulationChemicalReaction(self, t_init, t_max):
-		N = self.A + self.B
+		N = self.A + self.B #total concentration of the system
 		t = t_init
 		concentration_A = []
 		concentration_B = []
@@ -51,7 +51,7 @@ if __name__ == "__main__":
 	Dt = 0.02
 	t_init = 0
 	t_max = 4
-	x = np.linspace(t_init, t_max, int(t_max/Dt))
+	x = np.linspace(t_init, t_max, int(t_max/Dt)) #defines x-axis for plots
 
 	simulation = chemicalSystem(A0, B0, k1, k2, Dt)
 	concentrationA, concentrationB = simulation.simulationChemicalReaction(t_init, t_max)
