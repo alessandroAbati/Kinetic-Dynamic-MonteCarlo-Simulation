@@ -1,7 +1,7 @@
 # Kinetic/Dynamic Monte-Carlo Simulation
  Simple example of Kinetic/Dynamic Monte-Carlo simulation of 2 molecules chemical reaction.
 
- ![monteCarloSimulation](https://github.com/alessandroAbati/Kinetic-Dynamic-MonteCarlo-Simulation/output/monteCarloSimulation)
+![monteCarloSimulation](https://github.com/alessandroAbati/Kinetic-Dynamic-MonteCarlo-Simulation/assets/136715422/1758f54b-c317-476a-bbbb-109739943442)
 
 ### Introduction
 This project introduces a basic Monte Carlo simulation model for investigating a chemical reaction between molecules A and B. The simulation utilizes random sampling to mimic complex systems and employs the kinetic-dynamic Monte Carlo method to capture the dynamic behavior of molecule concentrations over time.
